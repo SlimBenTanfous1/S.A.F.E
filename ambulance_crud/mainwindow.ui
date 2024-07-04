@@ -1,0 +1,1546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="Ambulance">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>800</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabBar::tab{
+	background-color: #0000ffff;
+	color: #ffffff;
+	border-top-left-radius: 17px;
+	border-top-right-radius: 17px;
+	padding: 20px;
+}
+QTabBar::tab:disabled{
+	background-color:#0000ffff;
+	color: #656565;
+}
+QTabWidget::pane {
+	background:transparent;
+}
+QTabBar::tab:selected{
+    background-color: #0000ffff;
+	color: rgb(0, 0, 0);
+	border-style: solid;
+	border-width: 1px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-color: rgb(255, 0, 0);
+	padding: 5px;
+}
+QTabBar::tab:selected:disabled{
+	background-color:rgb(255, 171, 171);
+	color: #656565;
+}
+QTabBar::tab:!selected {
+background-color:#d00a0a;
+}
+QTabBar::tab:!selected:hover {
+    background-color: rgb(255, 165, 165);
+}
+QTabBar::tab:top:!selected {
+    margin-top: 3px;
+}
+QTabBar::tab:bottom:!selected {
+    margin-bottom: 3px;
+}
+QTabBar::tab:top, QTabBar::tab:bottom {
+    min-width: 8ex;
+    margin-right: -1px;
+    padding: 5px 10px 5px 10px;
+}
+QTabBar::tab:top:selected {
+    border-bottom-color: none;
+}
+QTabBar::tab:bottom:selected {
+    border-top-color: none;
+}
+QTabBar::tab:top:last, QTabBar::tab:bottom:last,QTabBar::tab:top:only-one, QTabBar::tab:bottom:only-one {
+    margin-right: 0;
+}
+QTabBar::tab:left:!selected {
+    margin-right: 3px;
+}
+QTabBar::tab:right:!selected{
+    margin-left: 3px;
+}
+QTabBar::tab:left, QTabBar::tab:right {
+    min-height: 8ex;
+    margin-bottom: -1px;
+    padding: 10px 5px 10px 5px;
+}
+QTabBar::tab:left:selected {
+    border-left-color: none;
+}
+QTabBar::tab:right:selected {
+    border-right-color: none;
+}
+QTabBar::tab:left:last, QTabBar::tab:right:last,QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
+    margin-bottom: 0;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>4</number>
+    </property>
+    <widget class="QWidget" name="Menu">
+     <attribute name="title">
+      <string>Menu </string>
+     </attribute>
+     <widget class="QPushButton" name="aller_gestiondesambulance">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>90</y>
+        <width>520</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+      </property>
+      <property name="text">
+       <string>Gestion des ambulances</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="aller_listedesambulances">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>155</y>
+        <width>520</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+      </property>
+      <property name="text">
+       <string>Listes des ambulances</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="aller_statistique">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>220</y>
+        <width>520</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+      </property>
+      <property name="text">
+       <string>Statistique</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Fermer">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>500</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+      </property>
+      <property name="text">
+       <string>Fermer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="qml.qrc">:/background.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="aller_map">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>285</y>
+        <width>520</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+      </property>
+      <property name="text">
+       <string>Map</string>
+      </property>
+     </widget>
+     <zorder>background_3</zorder>
+     <zorder>aller_gestiondesambulance</zorder>
+     <zorder>aller_listedesambulances</zorder>
+     <zorder>aller_statistique</zorder>
+     <zorder>Fermer</zorder>
+     <zorder>aller_map</zorder>
+    </widget>
+    <widget class="QWidget" name="Ambulances">
+     <attribute name="title">
+      <string>Gestion des ambulance</string>
+     </attribute>
+     <widget class="QGroupBox" name="Ambulance_Infos">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>411</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+	background: rgba(199, 153, 207, 100); rgb(255, 0, 0)
+    border: 2px solid;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+	border-bottom-left-radius: 7px;
+    border-color: rgba(199, 153, 207, 200);
+    margin-top: 22px;
+}
+QGroupBox::title  {
+    background-color: rgb(199, 153, 207);
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 5px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}</string>
+      </property>
+      <property name="title">
+       <string>Ambulance Informations</string>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>302</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="Labels_Lines">
+        <item row="0" column="0" rowspan="2">
+         <widget class="QLabel" name="ambu_label_immatriculation">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Immatriculation</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" rowspan="2">
+         <widget class="QLabel" name="ambu_label_etat">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Etat</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1" rowspan="2" colspan="2">
+         <widget class="QComboBox" name="ambu_combo_etat">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QComboBox
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    selection-background-color: #111;
+    selection-color: yellow;
+    color: black;
+    background-color: #0000ffff;
+    border-style: solid;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5;
+    padding: 1px 0px 1px 20px;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>libre</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>occupee</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="1" rowspan="2" colspan="2">
+         <widget class="QLineEdit" name="ambu_line_immatriculation">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+	background-color: rgb(255, 255, 255)
+		border: 2px solid rgb(255, 255, 255);
+			border-radius: 10px;
+}
+QLineEdit:hover {
+	background-color: rgba(236,146,146,255);
+		border: 2px solid rgba(47, 127, 147, 200);
+			border-radius: 10px;
+}</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0" rowspan="2">
+         <widget class="QLabel" name="ambu_label_type">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Type</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1" rowspan="2" colspan="2">
+         <widget class="QComboBox" name="ambu_combo_type">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QComboBox
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    selection-background-color: #111;
+    selection-color: yellow;
+    color: black;
+    background-color: #0000ffff;
+    border-style: solid;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5;
+    padding: 1px 0px 1px 20px;
+}</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>medicaliser</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>non medicaliser</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="1" rowspan="2">
+         <widget class="QLineEdit" name="ambu_line_longitude">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+	background-color: #0000ffff;
+		border: 2px solid rgb(255, 255, 255);
+			border-radius: 10px;
+}
+QLineEdit:hover {
+	background-color: rgba(236,146,146,255);
+		border: 2px solid rgba(47, 127, 147, 200);
+			border-radius: 10px;
+}</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" rowspan="4">
+         <widget class="QLabel" name="ambu_label_longitude">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Gps</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="ambu_line_altitude">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+	background-color: #0000ffff;
+		border: 2px solid rgb(255, 255, 255);
+			border-radius: 10px;
+}
+QLineEdit:hover {
+	background-color: rgba(236,146,146,255);
+		border: 2px solid rgba(47, 127, 147, 200);
+			border-radius: 10px;
+}</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="ambu_Gps">
+       <property name="geometry">
+        <rect>
+         <x>139</x>
+         <y>210</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Montserrat Medium</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+       </property>
+       <property name="text">
+        <string>Gps</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="ambu_push_Ajouter">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>350</y>
+        <width>160</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+      </property>
+      <property name="text">
+       <string>Ajouter</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ambu_push_Supprimer">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>450</y>
+        <width>160</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ambu_Label_GestionInfo">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>260</y>
+        <width>180</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #0000ffff;
+	border: 2px solid rgba(244,185,185,255);
+		border-radius: 10px;
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="ambu_combo_immatriculation">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>80</y>
+        <width>201</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    selection-background-color: #111;
+    selection-color: yellow;
+    color: black;
+    background-color: #0000ffff;
+    border-style: solid;
+    border: 1px solid rgba(249,216,216,255);
+    border-radius: 5;
+    padding: 1px 0px 1px 20px;
+}</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ambu_push_affiche_imatriculation">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>120</y>
+        <width>180</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+      </property>
+      <property name="text">
+       <string>Affiche les immatriculation</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ambu_push_Modifier">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>400</y>
+        <width>160</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+      </property>
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="qml.qrc">:/background.png</pixmap>
+      </property>
+     </widget>
+     <zorder>background_5</zorder>
+     <zorder>Ambulance_Infos</zorder>
+     <zorder>ambu_push_Ajouter</zorder>
+     <zorder>ambu_push_Supprimer</zorder>
+     <zorder>ambu_Label_GestionInfo</zorder>
+     <zorder>ambu_combo_immatriculation</zorder>
+     <zorder>ambu_push_affiche_imatriculation</zorder>
+     <zorder>ambu_push_Modifier</zorder>
+    </widget>
+    <widget class="QWidget" name="Liste_des_ambulances">
+     <attribute name="title">
+      <string>Listes des ambulances</string>
+     </attribute>
+     <widget class="QTableView" name="ambu_TableView">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>750</width>
+        <height>260</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#0000ffff;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="autoScrollMargin">
+       <number>13</number>
+      </property>
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <property name="gridStyle">
+       <enum>Qt::NoPen</enum>
+      </property>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>149</number>
+      </attribute>
+     </widget>
+     <widget class="QLineEdit" name="ambu_line_Recherche">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>410</y>
+        <width>260</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+	background-color: rgb(255, 122, 98);
+		border: 2px solid rgb(255, 255, 255);
+			border-radius: 10px;
+background-color:#0000ffff;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+}
+QLineEdit:hover {
+	background-color: #0000ffff;
+		border: 2px solid rgb(255, 255, 255)
+			border-radius: 10px;
+}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Perso_Label_ListeInfo">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>500</y>
+        <width>260</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	border: 2px solid rgba(134, 47, 147, 100);
+		border-radius: 10px;
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ambu_push_Tri_type">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>460</y>
+        <width>250</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:#0000ffff;
+}</string>
+      </property>
+      <property name="text">
+       <string>Trier par type d&quot;ambulance</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="qml.qrc">:/background.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ambu_push_ExportPDF">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>460</y>
+        <width>250</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+      </property>
+      <property name="text">
+       <string>Export PDF</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ambu_qr_code">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>330</y>
+        <width>200</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_ecrireleimmat">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>380</y>
+        <width>260</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ecrire l'immatriculation</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <zorder>background_2</zorder>
+     <zorder>ambu_TableView</zorder>
+     <zorder>ambu_line_Recherche</zorder>
+     <zorder>Perso_Label_ListeInfo</zorder>
+     <zorder>ambu_push_Tri_type</zorder>
+     <zorder>ambu_push_ExportPDF</zorder>
+     <zorder>ambu_qr_code</zorder>
+     <zorder>label_ecrireleimmat</zorder>
+    </widget>
+    <widget class="QWidget" name="Statistique">
+     <attribute name="title">
+      <string>Statistique</string>
+     </attribute>
+     <widget class="QLabel" name="ambu_label_Stats">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>60</y>
+        <width>550</width>
+        <height>350</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ambu_push_UpdateStats">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>460</y>
+        <width>191</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:#0000ffff;
+}</string>
+      </property>
+      <property name="text">
+       <string>Update Statistiques</string>
+      </property>
+     </widget>
+     <zorder>ambu_push_UpdateStats</zorder>
+     <zorder>ambu_label_Stats</zorder>
+    </widget>
+    <widget class="QWidget" name="Map">
+     <attribute name="title">
+      <string>Map</string>
+     </attribute>
+     <widget class="QComboBox" name="ambu_combo_immatriculation_map">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>10</y>
+        <width>210</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    selection-background-color: #111;
+    selection-color: yellow;
+    color: black;
+	background-color:#0000ffff;
+    border-style: solid;
+    border: 1px solid #1e1e1e;
+    border-radius: 5;
+    padding: 1px 0px 1px 20px;
+}</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ambu_push_affiche_imatriculation_map">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>10</y>
+        <width>231</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+      </property>
+      <property name="text">
+       <string>Affiche les immatriculation</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="qml.qrc">:/background.png</pixmap>
+      </property>
+     </widget>
+     <widget class="WebAxWidget" name="ambu_WebBrowser">
+      <property name="control" stdset="0">
+       <string>{8856F961-340A-11D0-A96B-00C04FD705A2}</string>
+      </property>
+      <property name="focusPolicy" stdset="0">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="geometry" stdset="0">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>461</width>
+        <height>451</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>70</y>
+        <width>302</width>
+        <height>370</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="Labels_Lines_2">
+       <item row="4" column="1" rowspan="2" colspan="2">
+        <widget class="QLineEdit" name="ambu_line_longitude_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: #0000ffff;
+		border: 2px solid rgb(255, 255, 255);
+			border-radius: 10px;
+}
+QLineEdit:hover {
+	background-color: rgba(236,146,146,255);
+		border: 2px solid rgba(47, 127, 147, 200);
+			border-radius: 10px;
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" rowspan="2">
+        <widget class="QLabel" name="ambu_label_altitude_2">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Latitude</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" rowspan="2">
+        <widget class="QLabel" name="ambu_label_immatriculation_2">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Immatriculation</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1" rowspan="2" colspan="2">
+        <widget class="QLineEdit" name="ambu_line_altitude_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: #0000ffff;
+		border: 2px solid rgb(255, 255, 255);
+			border-radius: 10px;
+}
+QLineEdit:hover {
+	background-color: rgba(236,146,146,255);
+		border: 2px solid rgba(47, 127, 147, 200);
+			border-radius: 10px;
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" rowspan="2">
+        <widget class="QLabel" name="ambu_label_longitude_2">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Longitude</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0" rowspan="2">
+        <widget class="QLabel" name="ambu_label_etat_2">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Etat</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1" rowspan="2" colspan="2">
+        <widget class="QComboBox" name="ambu_combo_etat_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    selection-background-color: #111;
+    selection-color: yellow;
+    color: black;
+    background-color: #0000ffff;
+    border-style: solid;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5;
+    padding: 1px 0px 1px 20px;
+}</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>libre</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>occupee</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="1" rowspan="2" colspan="2">
+        <widget class="QLineEdit" name="ambu_line_immatriculation_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	background-color: #0000ffff ;
+		border: 2px solid rgb(255, 255, 255);
+			border-radius: 10px;
+}
+QLineEdit:hover {
+	background-color: rgba(236,146,146,255);
+		border: 2px solid rgba(47, 127, 147, 200);
+			border-radius: 10px;
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0" rowspan="2">
+        <widget class="QLabel" name="ambu_label_type_2">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Type</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1" rowspan="2" colspan="2">
+        <widget class="QComboBox" name="ambu_combo_type_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    selection-background-color: #111;
+    selection-color: yellow;
+    color: black;
+    background-color: #0000ffff;
+    border-style: solid;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5;
+    padding: 1px 0px 1px 20px;
+}</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>medicaliser</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>non medicaliser</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="ambu_Gps_2">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>460</y>
+        <width>301</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color:rgb(255, 157, 157)
+}</string>
+      </property>
+      <property name="text">
+       <string>Update</string>
+      </property>
+     </widget>
+     <zorder>background</zorder>
+     <zorder>ambu_combo_immatriculation_map</zorder>
+     <zorder>ambu_push_affiche_imatriculation_map</zorder>
+     <zorder>ambu_WebBrowser</zorder>
+     <zorder>layoutWidget_2</zorder>
+     <zorder>ambu_Gps_2</zorder>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="background_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="qml.qrc">:/background.png</pixmap>
+    </property>
+   </widget>
+   <zorder>background_4</zorder>
+   <zorder>Ambulance</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>9</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>1</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QAxWidget</class>
+   <extends>QWidget</extends>
+   <header>qaxwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>WebAxWidget</class>
+   <extends>QAxWidget</extends>
+   <header>webaxwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="qml.qrc"/>
+ </resources>
+ <connections/>
+</ui>

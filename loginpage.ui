@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginPage</class>
+ <widget class="QMainWindow" name="LoginPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-11</y>
+      <width>811</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Login">
+     <widget class="QLabel" name="employer_idLabel_5">
+      <property name="geometry">
+       <rect>
+        <x>84</x>
+        <y>217</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat SemiBold</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget {
+    font-size: 11px;
+}
+
+QTableView {
+    font-size: 10px;
+    alternate-background-color: #f0f0f0;
+}
+
+Browser QPushButton {
+    font-size: 10px;
+    min-width: 10px;
+}
+
+ColorButton::enabled {
+    border: 1px solid #444444;
+}
+
+ColorButton::disabled {
+    border: 1px solid #AAAAAA;
+}
+
+
+Browser QGroupBox {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+    border: 2px solid #999999;
+    border-radius: 5px;
+    margin-top: 1ex; /* leave space at the top for the title */
+    font-size: 13px;
+    color: black;
+}
+
+Browser QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center; /* position at the top center */
+    padding: 0 3px;
+    font-size: 13px;
+    color: black;
+}
+
+PluginItem {
+    border: 2px solid black;
+    background: white;
+}
+
+
+PluginItem Frame {
+    background: #CCCCCC;
+}
+
+
+TabButton {
+    border: 1px solid #8f8f91;
+    border-radius: 2px;
+    padding: 3px;
+    min-width: 120px;
+}
+
+TabButton::checked {
+    background-color: qlineargradient(x1: 0, y1: 0 , x2: 0, y2: 1,
+                                      stop: 0 #9a9b9e, stop: 1 #babbbe);
+}
+
+
+TabButton::pressed {
+    background-color: qlineargradient(x1: 0, y1: 0 , x2: 0, y2: 1,
+                                      stop: 0 #9a9b9e, stop: 1 #babbbe);
+}</string>
+      </property>
+      <property name="text">
+       <string>Employer_id :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="employer_idLabel_8">
+      <property name="geometry">
+       <rect>
+        <x>83</x>
+        <y>269</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat SemiBold</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget {
+    font-size: 11px;
+}
+
+QTableView {
+    font-size: 10px;
+    alternate-background-color: #f0f0f0;
+}
+
+Browser QPushButton {
+    font-size: 10px;
+    min-width: 10px;
+}
+
+ColorButton::enabled {
+    border: 1px solid #444444;
+}
+
+ColorButton::disabled {
+    border: 1px solid #AAAAAA;
+}
+
+
+Browser QGroupBox {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #E0E0E0, stop: 1 #FFFFFF);
+    border: 2px solid #999999;
+    border-radius: 5px;
+    margin-top: 1ex; /* leave space at the top for the title */
+    font-size: 13px;
+    color: black;
+}
+
+Browser QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center; /* position at the top center */
+    padding: 0 3px;
+    font-size: 13px;
+    color: black;
+}
+
+PluginItem {
+    border: 2px solid black;
+    background: white;
+}
+
+
+PluginItem Frame {
+    background: #CCCCCC;
+}
+
+
+TabButton {
+    border: 1px solid #8f8f91;
+    border-radius: 2px;
+    padding: 3px;
+    min-width: 120px;
+}
+
+TabButton::checked {
+    background-color: qlineargradient(x1: 0, y1: 0 , x2: 0, y2: 1,
+                                      stop: 0 #9a9b9e, stop: 1 #babbbe);
+}
+
+
+TabButton::pressed {
+    background-color: qlineargradient(x1: 0, y1: 0 , x2: 0, y2: 1,
+                                      stop: 0 #9a9b9e, stop: 1 #babbbe);
+}</string>
+      </property>
+      <property name="text">
+       <string>Mot De Passe</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="employer_id_Edit_5">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>240</y>
+        <width>230</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font/>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#fdfdfd;
+height:21px;
+width:217px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.12999999523162842));
+border-radius:10px;
+border:1px solid #d7d7d7;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>3</y>
+        <width>401</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/new/prefix1/white.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>501</width>
+        <height>551</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/spectrum.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QSplitter" name="splitter">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>290</y>
+        <width>219</width>
+        <height>47</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QLineEdit" name="employer_id_Edit_4">
+       <property name="font">
+        <font/>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:#fdfdfd;
+height:21px;
+width:217px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.12999999523162842));
+border-radius:10px;
+border:1px solid #d7d7d7;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="ajouterButton_3">
+       <property name="font">
+        <font>
+         <family>Montserrat Light</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:#d00a0a;
+height:24px;
+width:125px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:10px;
+color: rgb(255, 255, 255);
+</string>
+       </property>
+       <property name="text">
+        <string>Se Connecter</string>
+       </property>
+      </widget>
+     </widget>
+     <zorder>splitter</zorder>
+     <zorder>label</zorder>
+     <zorder>employer_idLabel_5</zorder>
+     <zorder>employer_id_Edit_5</zorder>
+     <zorder>employer_idLabel_8</zorder>
+     <zorder>label_2</zorder>
+    </widget>
+    <widget class="QWidget" name="page_2"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

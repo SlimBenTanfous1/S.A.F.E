@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>E:/Projet C++/dossier fih kol chay/logo officiel png.png</file>
+        <file>E:/Projet C++/dossier fih kol chay/logo safe asgher.png</file>
+        <file>../../bacckk.png</file>
+        <file>../../../Downloads/7sn5o1woonmklx1h.jpg</file>
+        <file>../../white.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>../../grey.png</file>
+        <file>E:/Projet C++/dossier fih kol chay/logo abyedh png.png</file>
+        <file>../../../Downloads/safe-icon.ico</file>
+        <file>spectrum.png</file>
+        <file>../../spectrum.png</file>
+        <file>hide.png</file>
+        <file>show.png</file>
+        <file>smart hopital.png</file>
+        <file>separation.png</file>
+        <file>trinity.png</file>
+        <file>background login.png</file>
+    </qresource>
+</RCC>
